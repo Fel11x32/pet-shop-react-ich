@@ -1,0 +1,25 @@
+@use 'reset';
+@use 'variables' as vars;
+@use 'mixins';
+
+body {
+	color: vars.$text-color;
+	background-color: vars.$primary-color;
+}
+
+#root {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+}
+
+#root > main {
+	flex: 1;
+}
+
+.container {
+	max-width: vars.$container-max-width;
+	margin: 0 auto;
+	padding-inline: 16px;
+}
