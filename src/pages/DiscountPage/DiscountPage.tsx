@@ -1,7 +1,5 @@
 const DiscountPage = () => {
-	return (
-		<div>DiscountPage</div>
-	)
-}
+	return <div>DiscountPage</div>;
+};
 
-export default DiscountPage
+export default DiscountPage;
