@@ -1,0 +1,22 @@
+@use '../../styles/variables' as vars;
+
+.header {
+	background-color: vars.$white-color;
+	padding-block: 30px;
+	position: sticky;
+	z-index: 10;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: vars.$container-max-width;
+	margin: 0 auto;
+}
+
+.menu {
+	display: flex;
+	gap: 32px;
+}

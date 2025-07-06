@@ -2,9 +2,12 @@
 @use 'variables' as vars;
 @use 'mixins';
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 body {
 	color: vars.$text-color;
-	background-color: vars.$primary-color;
+	background-color: vars.$white-color;
+	font-family: 'Montserrat';
 }
 
 #root {
@@ -21,5 +24,5 @@ body {
 .container {
 	max-width: vars.$container-max-width;
 	margin: 0 auto;
-	padding-inline: 16px;
+	padding-inline: 20px;
 }

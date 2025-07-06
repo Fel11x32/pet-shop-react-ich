@@ -1,0 +1,20 @@
+@use '../../styles/variables' as vars;
+
+.link {
+	display: inline-block;
+
+	font-family: 'Montserrat';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 130%;
+
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: vars.$primary-color;
+	}
+}
+
+.active {
+	color: vars.$primary-color;
+}

@@ -1,0 +1,27 @@
+@use '../../styles/variables' as vars;
+
+.button {
+	padding-block: 16px;
+	padding-inline: 60px;
+
+	background-color: vars.$white-color;
+	border-radius: 6px;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 130%;
+
+	transition:
+		background-color,
+		0.3s ease;
+
+	&:hover {
+		background-color: vars.$black-color;
+		color: vars.$white-color;
+	}
+
+	&:active {
+		background-color: vars.$light-gray-color;
+		color: vars.$primary-color;
+	}
+}

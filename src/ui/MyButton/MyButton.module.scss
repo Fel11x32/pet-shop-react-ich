@@ -1,0 +1,26 @@
+@use '../../styles/variables' as vars;
+
+.myButton {
+	padding-inline: 84px;
+	padding-block: 16px;
+
+	background-color: vars.$primary-color;
+	border-radius: 6px;
+
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 130%;
+
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: black;
+	}
+
+	&:active {
+		border: 1px solid rgb(40, 40, 40);
+		background: rgb(255, 255, 255);
+		color: black;
+	}
+}
