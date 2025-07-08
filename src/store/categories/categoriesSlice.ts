@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export interface Category {
 	id: number;
-	name: string;
+	title: string;
 	image: string;
 }
 

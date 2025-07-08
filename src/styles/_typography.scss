@@ -1,0 +1,24 @@
+@use './variables' as vars;
+
+h1 {
+	color: vars.$white-color;
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 110%;
+}
+
+h2 {
+	color: vars.$text-color;
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 110%;
+	letter-spacing: 0%;
+	text-align: left;
+}
+
+h3 {
+	color: rgb(40, 40, 40);
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 130%;
+}
