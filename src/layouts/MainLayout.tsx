@@ -17,7 +17,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 	return (
 		<>
 			<Header navLinks={navLinks} />
-			<main className="container">{children}</main>
+			<main>{children}</main>
 			<Footer />
 		</>
 	);

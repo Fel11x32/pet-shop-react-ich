@@ -20,9 +20,3 @@ body {
 #root > main {
 	flex: 1;
 }
-
-.container {
-	max-width: vars.$container-max-width;
-	margin: 0 auto;
-	padding-inline: 20px;
-}

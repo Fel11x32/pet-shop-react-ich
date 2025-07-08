@@ -1,0 +1,38 @@
+@use '../../styles/variables' as vars;
+
+.hero {
+	width: 100%;
+	min-height: 600px;
+	background-image: url('../../assets/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	color: vars.$white-color;
+	min-width: vars.$container-max-width;
+	margin: 0 auto;
+	padding-inline: 20px;
+}
+
+
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+	.hero {
+		height: 500px;
+	}
+
+	.title {
+		font-size: 2.2rem;
+	}
+}
