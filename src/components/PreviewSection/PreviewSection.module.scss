@@ -1,6 +1,6 @@
 @use '../../styles/variables' as vars;
 
-.categories {
+.section {
 	padding: 40px 0px 53px;
 }
 .container {
@@ -27,32 +27,12 @@
 	min-width: 142px;
 	text-decoration: none;
 }
-.list {
+
+.grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	gap: 32px;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
-.item {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.img {
-	border-radius: 12px;
-	max-width: 316px;
-	max-height: 350px;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
-}
-.linkToCategori {
-	text-decoration: none;
-}
-.secondTitle {
-	margin-top: 16px;
-	text-align: center;
 }

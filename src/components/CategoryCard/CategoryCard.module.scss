@@ -1,0 +1,16 @@
+.item {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.img {
+	border-radius: 12px;
+	max-width: 316px;
+	max-height: 350px;
+	object-position: center;
+}
+.title {
+	margin-top: 16px;
+	text-align: center;
+}

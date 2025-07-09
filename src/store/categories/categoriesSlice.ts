@@ -1,17 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
-export interface Category {
-	id: number;
-	title: string;
-	image: string;
-}
-
-interface CategoriesState {
-	data: Category[];
-	loading: boolean;
-	error: string | null;
-}
+import type { CategoriesState, Category } from './categoriesTypes';
 
 const initialState: CategoriesState = {
 	data: [],

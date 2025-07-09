@@ -1,0 +1,29 @@
+@use '../../styles/variables' as vars;
+
+.section {
+	padding: 53px 0px 40px;
+}
+.container {
+	max-width: vars.$container-max-width;
+	margin: 0 auto;
+	width: 100%;
+	padding-inline: 40px;
+}
+.card {
+	border-radius: 12px;
+	padding: 32px;
+	background-image:
+		url(../../assets/cta-pets.png),
+		linear-gradient(220deg, #2451c6 0%, #0d50ff 100%);
+	background-repeat: no-repeat;
+	background-position: 10% 100%;
+}
+.title {
+	text-align: center;
+	color: vars.$white-color;
+}
+.form {
+	display: flex;
+	justify-content: end;
+	margin-top: 48px;
+}

@@ -3,12 +3,13 @@ import styles from './MyLargeButton.module.scss';
 
 interface MyLargeButtonProps {
 	children: ReactNode;
-	onClick: () => void;
+	type: 'button' | 'submit' | 'reset';
+	onClick?: () => void;
 }
 
-const MyLargeButton: FC<MyLargeButtonProps> = ({ children, onClick }) => {
+const MyLargeButton: FC<MyLargeButtonProps> = ({ children, onClick, type }) => {
 	return (
-		<button onClick={onClick} className={styles.button}>
+		<button type={type} onClick={onClick} className={styles.button}>
 			{children}
 		</button>
 	);

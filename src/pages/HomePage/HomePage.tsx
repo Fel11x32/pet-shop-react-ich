@@ -1,4 +1,5 @@
-import Categories from '../../components/Categories/CategoryPreview';
+import Categories from '../../components/CategoryPreview/CategoryPreview';
+import DiscountSection from '../../components/DiscountSection/DiscountSection';
 import Hero from '../../components/Hero/Hero';
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
 		<>
 			<Hero />
 			<Categories />
+			<DiscountSection />
 		</>
 	);
 };

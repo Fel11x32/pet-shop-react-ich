@@ -1,4 +1,3 @@
-
 import type { FC, ReactNode } from 'react';
 import styles from './InfoBlock.module.scss';
 
