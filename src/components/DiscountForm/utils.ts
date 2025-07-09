@@ -1,5 +1,7 @@
-export const formatPhoneInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-	let value = e.target.value.replace(/\D/g, '');
+export const formatPhoneInput = (
+	event: React.ChangeEvent<HTMLInputElement>,
+) => {
+	let value = event.target.value.replace(/\D/g, '');
 
 	if (value.length > 0 && !value.startsWith('+')) {
 		if (value.startsWith('38') || value.startsWith('49')) {
@@ -12,5 +14,5 @@ export const formatPhoneInput = (e: React.ChangeEvent<HTMLInputElement>) => {
 	if (value.startsWith('+38') && value.length > 13) return;
 	if (value.startsWith('+49') && value.length > 14) return;
 
-	e.target.value = value;
+	event.target.value = value;
 };

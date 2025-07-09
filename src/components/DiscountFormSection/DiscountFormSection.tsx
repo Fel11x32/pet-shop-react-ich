@@ -1,7 +1,7 @@
 import styles from './DiscountSection.module.scss';
 import DiscountForm from '../DiscountForm/DiscountForm';
 
-const DiscountSection = () => {
+const DiscountFormSection = () => {
 	return (
 		<section className={styles.section}>
 			<div className={styles.container}>
@@ -16,4 +16,4 @@ const DiscountSection = () => {
 	);
 };
 
-export default DiscountSection;
+export default DiscountFormSection;

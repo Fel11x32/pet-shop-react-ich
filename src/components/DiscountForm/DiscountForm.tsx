@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './DiscountForm.module.scss';
@@ -13,7 +13,7 @@ interface FormData {
 	email: string;
 }
 
-const DiscountForm: React.FC = () => {
+const DiscountForm: FC = () => {
 	const {
 		register,
 		handleSubmit,

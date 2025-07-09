@@ -2,7 +2,7 @@ import { useEffect, type FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.ts';
 import { fetchCategories } from '../../store/categories/categoriesSlice.ts';
 import { ROUTES } from '../../routes/routes.ts';
-import CategoryCard from '../CategoryCard/CategoryCard';
+import CategoryCard from '../../ui/MyCategoryCard/MyCategoryCard.tsx';
 import PreviewSection from '../PreviewSection/PreviewSection';
 
 const CategoryPreview: FC = () => {

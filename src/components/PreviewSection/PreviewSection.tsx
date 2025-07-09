@@ -1,12 +1,12 @@
-import React, { type FC } from 'react';
+import { type FC, type ReactNode } from 'react';
 import styles from './PreviewSection.module.scss';
-import { Link } from 'react-router-dom';
+import MyPreviewLink from '../../ui/MyPreviewLink/MyPreviewLink';
 
 interface PreviewSectionProps {
 	title: string;
 	linkText: string;
 	linkTo: string;
-	children: React.ReactNode;
+	children: ReactNode;
 }
 
 const PreviewSection: FC<PreviewSectionProps> = ({
@@ -21,9 +21,7 @@ const PreviewSection: FC<PreviewSectionProps> = ({
 				<div className={styles.title}>
 					<h2>{title}</h2>
 					<div className={styles.devider}></div>
-					<Link className={styles.primaryLink} to={linkTo}>
-						{linkText}
-					</Link>
+					<MyPreviewLink to={linkTo}>{linkText}</MyPreviewLink>
 				</div>
 				<ul className={styles.grid}>{children}</ul>
 			</div>

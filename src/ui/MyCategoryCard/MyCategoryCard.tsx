@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import styles from './CategoryCard.module.scss';
+import styles from './MyCategoryCard.module.scss';
 import { ROUTES } from '../../routes/routes.ts';
 import type { FC } from 'react';
 
-interface CategoryCardProps {
+interface MyCategoryCardProps {
 	id: number;
 	title: string;
 	image: string;
 }
 
-const CategoryCard: FC<CategoryCardProps> = ({ id, title, image }) => {
+const MyCategoryCard: FC<MyCategoryCardProps> = ({ id, title, image }) => {
 	return (
 		<li className={styles.item}>
 			<Link className={styles.link} to={`${ROUTES.CATEGORIES}/${id}`}>
@@ -24,4 +24,4 @@ const CategoryCard: FC<CategoryCardProps> = ({ id, title, image }) => {
 	);
 };
 
-export default CategoryCard;
+export default MyCategoryCard;
