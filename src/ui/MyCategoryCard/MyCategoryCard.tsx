@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './MyCategoryCard.module.scss';
-import { ROUTES } from '../../routes/routes.ts';
+import { ROUTES } from '../../utils/routes.ts';
 import type { FC } from 'react';
 
 interface MyCategoryCardProps {

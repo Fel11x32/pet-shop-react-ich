@@ -28,6 +28,14 @@ const App = () => {
 					}
 				/>
 				<Route
+					path="/categories/:id"
+					element={
+						<MainLayout>
+							<ProductsPage />
+						</MainLayout>
+					}
+				/>
+				<Route
 					path="/products"
 					element={
 						<MainLayout>

@@ -5,6 +5,7 @@ export interface Product {
 	price: number;
 	discont_price?: number;
 	image: string;
+	categoryId: number;
 }
 
 export interface ProductsState {

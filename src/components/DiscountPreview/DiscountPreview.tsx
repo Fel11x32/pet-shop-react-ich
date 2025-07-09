@@ -1,9 +1,9 @@
 import PreviewSection from '../PreviewSection/PreviewSection';
-import { ROUTES } from '../../routes/routes.ts';
+import { ROUTES } from '../../utils/routes.ts';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.ts';
 import { useEffect } from 'react';
 import { fetchProducts } from '../../store/products/productsSlice.ts';
-import MyProductCard from '../../ui/MyProductCard/MyproductCard.tsx';
+import MyProductCard from '../../ui/MyProductCard/MyProductCard.tsx';
 
 const DiscountPreview = () => {
 	const dispatch = useAppDispatch();

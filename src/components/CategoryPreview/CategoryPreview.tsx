@@ -1,11 +1,16 @@
 import { useEffect, type FC } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.ts';
 import { fetchCategories } from '../../store/categories/categoriesSlice.ts';
-import { ROUTES } from '../../routes/routes.ts';
+import { ROUTES } from '../../utils/routes.ts';
 import CategoryCard from '../../ui/MyCategoryCard/MyCategoryCard.tsx';
 import PreviewSection from '../PreviewSection/PreviewSection';
 
-const CategoryPreview: FC = () => {
+interface CategoryPreviewProps {
+	slice: number;
+	showLinkBlock?: boolean;
+}
+
+const CategoryPreview: FC<CategoryPreviewProps> = ({slice, showLinkBlock}) => {
 	const dispatch = useAppDispatch();
 	const {
 		data: categories,
@@ -17,13 +22,14 @@ const CategoryPreview: FC = () => {
 		dispatch(fetchCategories());
 	}, [dispatch]);
 
-	const displayedCategories = categories.slice(0, 4);
+	const displayedCategories = categories.slice(0, slice);
 
 	return (
 		<PreviewSection
 			title="Categories"
 			linkText="All categories"
 			linkTo={ROUTES.CATEGORIES}
+			showLinkBlock={showLinkBlock}
 		>
 			{loading && <p>Загрузка...</p>}
 			{error && <p>Ошибка: {error}</p>}

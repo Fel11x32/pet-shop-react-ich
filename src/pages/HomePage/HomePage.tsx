@@ -7,7 +7,7 @@ const HomePage = () => {
 	return (
 		<>
 			<Hero />
-			<Categories />
+			<Categories slice={4}/>
 			<DiscountFormSection />
 			<DiscountPreview />
 		</>

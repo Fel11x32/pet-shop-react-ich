@@ -6,6 +6,7 @@ interface PreviewSectionProps {
 	title: string;
 	linkText: string;
 	linkTo: string;
+	showLinkBlock?: boolean;
 	children: ReactNode;
 }
 
@@ -13,6 +14,7 @@ const PreviewSection: FC<PreviewSectionProps> = ({
 	title,
 	linkText,
 	linkTo,
+	showLinkBlock = true,
 	children,
 }) => {
 	return (
@@ -20,8 +22,12 @@ const PreviewSection: FC<PreviewSectionProps> = ({
 			<div className={styles.container}>
 				<div className={styles.title}>
 					<h2>{title}</h2>
-					<div className={styles.devider}></div>
-					<MyPreviewLink to={linkTo}>{linkText}</MyPreviewLink>
+					{showLinkBlock !== false && (
+						<>
+							<div className={styles.devider}></div>
+							<MyPreviewLink to={linkTo}>{linkText}</MyPreviewLink>
+						</>
+					)}
 				</div>
 				<ul className={styles.grid}>{children}</ul>
 			</div>

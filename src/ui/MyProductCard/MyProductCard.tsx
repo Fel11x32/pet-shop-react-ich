@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 import styles from './MyProductCard.module.scss';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../routes/routes';
+import { ROUTES } from '../../utils/routes';
 
 interface MyProductCardProps {
 	id: number;
