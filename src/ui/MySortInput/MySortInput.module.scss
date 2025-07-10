@@ -1,0 +1,15 @@
+@use '../../styles/variables' as vars;
+
+.input[type='number'] {
+	max-width: 112px;
+	padding-block: 8px;
+	padding-inline: 16px;
+
+	color: vars.$gray;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 126%;
+
+	border-radius: 6px;
+	border: 1px solid vars.$gray;
+}

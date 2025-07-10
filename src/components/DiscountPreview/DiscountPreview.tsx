@@ -22,7 +22,7 @@ const DiscountPreview = () => {
 		.slice(0, 4);
 
 	return (
-		<PreviewSection title="Sale" linkText="All sales" linkTo={ROUTES.PRODUCTS}>
+		<PreviewSection title="Sale" linkText="All sales" linkTo={ROUTES.DISCOUNT}>
 			{loading && <p>Загрузка...</p>}
 			{error && <p>Error: {error}</p>}
 
