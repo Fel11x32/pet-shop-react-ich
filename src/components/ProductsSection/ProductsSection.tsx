@@ -10,6 +10,7 @@ interface ProductsSectionProps {
 	loading: boolean;
 	error: string | null;
 	title: string;
+	showDiscountToggle?: boolean;
 }
 
 const ProductsSection: FC<ProductsSectionProps> = ({
@@ -17,6 +18,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({
 	loading,
 	error,
 	title,
+	showDiscountToggle,
 }) => {
 	const [minPrice, setMinPrice] = useState('');
 	const [maxPrice, setMaxPrice] = useState('');
@@ -54,6 +56,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({
 					onMaxPriceChange={setMaxPrice}
 					onSortChange={setSort}
 					onDiscountToggle={setDiscountOnly}
+					showDiscountToggle={showDiscountToggle}
 				/>
 
 				{loading && <p>Loading...</p>}

@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import MySortInput from '../../ui/MySortInput/MySortInput';
-import styles from './ProductsFilter.module.scss'
+import styles from './ProductsFilter.module.scss';
 
 interface ProductsFiltersProps {
 	minPrice: string;
@@ -11,6 +11,7 @@ interface ProductsFiltersProps {
 	onMaxPriceChange: (value: string) => void;
 	onSortChange: (value: string) => void;
 	onDiscountToggle: (value: boolean) => void;
+	showDiscountToggle?: boolean; // <- вот это добавь
 }
 
 const ProductsFilters: FC<ProductsFiltersProps> = ({
@@ -22,6 +23,7 @@ const ProductsFilters: FC<ProductsFiltersProps> = ({
 	onMaxPriceChange,
 	onSortChange,
 	onDiscountToggle,
+	showDiscountToggle = true,
 }) => {
 	return (
 		<div className={styles.filter}>
@@ -41,14 +43,16 @@ const ProductsFilters: FC<ProductsFiltersProps> = ({
 				/>
 			</label>
 
-			<label className={styles.item}>
-				Discounted items:
-				<input
-					type="checkbox"
-					checked={discountOnly}
-					onChange={e => onDiscountToggle(e.target.checked)}
-				/>
-			</label>
+			{showDiscountToggle && (
+				<label className={styles.item}>
+					Discounted items:
+					<input
+						type="checkbox"
+						checked={discountOnly}
+						onChange={e => onDiscountToggle(e.target.checked)}
+					/>
+				</label>
+			)}
 
 			<label className={styles.item}>
 				Sorted:
