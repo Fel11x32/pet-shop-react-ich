@@ -4,7 +4,7 @@ import type { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 interface Props {
 	placeholder: string;
-	register: UseFormRegisterReturn;
+	register?: UseFormRegisterReturn;
 	error?: FieldError;
 	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -29,7 +29,6 @@ const MyProductCard: FC<MyProductCardProps> = ({
 
 	const handleButtonClick = (e: React.MouseEvent) => {
 		e.stopPropagation(); // предотвратим переход при клике на кнопку
-		// Пока без функционала
 	};
 
 	return (

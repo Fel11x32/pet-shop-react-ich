@@ -23,4 +23,8 @@
 		background: rgb(255, 255, 255);
 		color: black;
 	}
+	&:disabled {
+		background-color: #7bc57b;
+		cursor: not-allowed;
+	}
 }
