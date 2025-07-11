@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.price_block {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 18px;
+	margin-bottom: 12px;
+	flex-wrap: wrap;
+}
+
+.new_price {
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 110%;
+}
+
+.old_price {
+	color: rgb(139, 139, 139);
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 130%;
+	text-decoration-line: line-through;
+}
+
+.discount {
+	background-color: #007bff;
+	color: white;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.normal_price {
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 110%;
+}

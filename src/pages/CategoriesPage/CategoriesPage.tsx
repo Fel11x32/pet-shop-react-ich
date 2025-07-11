@@ -1,9 +1,9 @@
-import CategoryPreview from "../../components/CategoryPreview/CategoryPreview";
+import CategoryPreview from '../../components/CategoryPreview/CategoryPreview';
 
 const CategoriesPage = () => {
 	return (
 		<>
-			<CategoryPreview slice={8} showLinkBlock={false}/>
+			<CategoryPreview slice={8} showLinkBlock={false} />
 		</>
 	);
 };

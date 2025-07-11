@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 import styles from './MyProductCard.module.scss';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
 
 interface MyProductCardProps {
@@ -20,11 +20,21 @@ const MyProductCard: FC<MyProductCardProps> = ({
 	discountPrice,
 	price,
 }) => {
+	const navigate = useNavigate();
 	const hasDiscount = discountPercent > 0 && discountPrice;
 
+	const handleCardClick = () => {
+		navigate(`${ROUTES.PRODUCTS}/${id}`);
+	};
+
+	const handleButtonClick = (e: React.MouseEvent) => {
+		e.stopPropagation(); // предотвратим переход при клике на кнопку
+		// Пока без функционала
+	};
+
 	return (
-		<li className={styles.item}>
-			<Link to={`${ROUTES.PRODUCTS}/${id}`}>
+		<li className={styles.item} onClick={handleCardClick}>
+			<div className={styles.card}>
 				<div className={styles.discountsWrapp}>
 					<img
 						className={styles.img}
@@ -34,6 +44,9 @@ const MyProductCard: FC<MyProductCardProps> = ({
 					{hasDiscount && (
 						<div className={styles.discounts}>-{discountPercent}%</div>
 					)}
+					<button className={styles.cartButton} onClick={handleButtonClick}>
+						Add to cart
+					</button>
 				</div>
 
 				<div className={styles.content}>
@@ -51,7 +64,7 @@ const MyProductCard: FC<MyProductCardProps> = ({
 						</div>
 					</div>
 				</div>
-			</Link>
+			</div>
 		</li>
 	);
 };

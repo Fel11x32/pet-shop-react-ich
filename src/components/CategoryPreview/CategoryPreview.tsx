@@ -10,7 +10,10 @@ interface CategoryPreviewProps {
 	showLinkBlock?: boolean;
 }
 
-const CategoryPreview: FC<CategoryPreviewProps> = ({slice, showLinkBlock}) => {
+const CategoryPreview: FC<CategoryPreviewProps> = ({
+	slice,
+	showLinkBlock,
+}) => {
 	const dispatch = useAppDispatch();
 	const {
 		data: categories,

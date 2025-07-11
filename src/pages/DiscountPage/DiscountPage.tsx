@@ -1,4 +1,4 @@
-import Discount from "../../components/Discount/Discount";
+import Discount from '../../components/Discount/Discount';
 
 const DiscountPage = () => {
 	return <Discount />;

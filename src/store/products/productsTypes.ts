@@ -10,6 +10,7 @@ export interface Product {
 
 export interface ProductsState {
 	data: Product[];
+	currentProduct: Product | null; // ⬅️ добавляем это
 	loading: boolean;
 	error: string | null;
 }

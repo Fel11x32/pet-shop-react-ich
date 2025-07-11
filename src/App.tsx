@@ -6,6 +6,7 @@ import DiscountPage from './pages/DiscountPage/DiscountPage';
 import CartPage from './pages/CartPage/CartPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import MainLayout from './layouts/MainLayout';
+import ProductById from './components/ProductById/ProductById';
 
 const App = () => {
 	return (
@@ -40,6 +41,14 @@ const App = () => {
 					element={
 						<MainLayout>
 							<ProductsPage />
+						</MainLayout>
+					}
+				/>
+				<Route
+					path="/products/:id"
+					element={
+						<MainLayout>
+							<ProductById />
 						</MainLayout>
 					}
 				/>

@@ -1,5 +1,5 @@
 import type { ChangeEvent, FC } from 'react';
-import styles from './MySortInput.module.scss'
+import styles from './MySortInput.module.scss';
 
 interface MySortInputProps {
 	type?: string;
@@ -16,7 +16,7 @@ const MySortInput: FC<MySortInputProps> = ({
 }) => {
 	return (
 		<input
-		className={styles.input}
+			className={styles.input}
 			type={type}
 			placeholder={placeholder}
 			value={value}

@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+
+.descriptionBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	.descriptionTitle {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 130%;
+	}
+
+	.description {
+		color: #444;
+		font-size: 15px;
+		line-height: 1.4;
+	}
+}

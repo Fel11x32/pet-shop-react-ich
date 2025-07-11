@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { Product } from '../products/productsTypes';
-import type { CartState } from './cartTypes';
+import type { CartItem, CartState } from './cartTypes'; // ✅ теперь CartItem
+// Product тип больше не нужен здесь
 
 const initialState: CartState = {
 	items: [],
@@ -10,12 +10,13 @@ const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addToCart(state, action: PayloadAction<Product>) {
+		addToCart(state, action: PayloadAction<CartItem>) {
+			// ✅ вот тут ключ
 			const existing = state.items.find(item => item.id === action.payload.id);
 			if (existing) {
-				existing.quantity += 1;
+				existing.quantity += action.payload.quantity;
 			} else {
-				state.items.push({ ...action.payload, quantity: 1 });
+				state.items.push(action.payload);
 			}
 		},
 		removeFromCart(state, action: PayloadAction<number>) {

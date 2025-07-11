@@ -1,10 +1,10 @@
-import type { FC } from "react";
-import type { Product } from "../../store/products/productsTypes";
-import MyProductCard from "../../ui/MyProductCard/MyProductCard";
-import styles from './ProductsList.module.scss'
+import type { FC } from 'react';
+import type { Product } from '../../store/products/productsTypes';
+import MyProductCard from '../../ui/MyProductCard/MyProductCard';
+import styles from './ProductsList.module.scss';
 
 interface ProductsListProps {
-	products: Product[]
+	products: Product[];
 }
 
 const ProductsList: FC<ProductsListProps> = ({ products }) => {
@@ -32,4 +32,4 @@ const ProductsList: FC<ProductsListProps> = ({ products }) => {
 	);
 };
 
-export default ProductsList
+export default ProductsList;

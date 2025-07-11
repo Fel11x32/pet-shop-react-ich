@@ -1,0 +1,65 @@
+@use '../../styles/variables' as *;
+
+.galleryWrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	flex: 1;
+	min-width: 300px;
+}
+
+.thumbnailColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 180px;
+}
+
+.thumbnail {
+	border: 2px solid transparent;
+	border-radius: 8px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: border-color 0.2s ease;
+
+	&:hover {
+		border-color: #007bff;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+.mainImage {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	border: 1px solid #ddd;
+	padding: 12px;
+	background: #fff;
+
+	img {
+		max-width: 100%;
+		max-height: 450px;
+		object-fit: cover;
+		border-radius: 12px;
+	}
+}
+
+@media (max-width: 768px) {
+	.galleryWrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.mainImage img {
+		width: 100%;
+		max-width: 320px;
+	}
+}
