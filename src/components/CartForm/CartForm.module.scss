@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	background-color: #fafafa;
+	padding: 20px;
+	border-radius: 8px;
+	flex: 1;
+}
+
+.total {
+	font-weight: 600;
+	font-size: 18px;
+
+	span {
+		color: #007bff;
+	}
+}
+
+input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+}
